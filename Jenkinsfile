@@ -4,10 +4,10 @@ pipeline {
     }}
 
     stages {
-        
+
         stage('Deploy') {
             steps {
-                sh 'docker run -p 8000:8000 ${ BUILD_NUMBER } --privileged --pid=host -v /var/run/docker.sock:/var/run/docker.sock'
+                sh "#!/bin/bash -xe docker run -p 8000:8000 ${ BUILD_NUMBER } --privileged --pid=host -v /var/run/docker.sock:/var/run/docker.sock"
                 echo 'Building done'
             }
         }
