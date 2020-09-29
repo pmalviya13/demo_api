@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo "current build number: ${currentBuild.number}"
                 echo 'Building done $BUILD_NUMBER'
-                sh "/user/bin/docker stop demo_api || true && /user/bin/docker rm demo_api || true"
+                //sh "/user/bin/docker stop demo_api || true && /user/bin/docker rm demo_api || true"
                 
             }
         }
