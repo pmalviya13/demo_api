@@ -4,6 +4,7 @@
 pipeline {
     agent { dockerfile {
         args '-t demo_api'
+        reuseNode true
     }}
 
     stages {
