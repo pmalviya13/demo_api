@@ -3,7 +3,7 @@
 
 pipeline {
     agent { dockerfile {
-        args '-t demo_api'
+        additionalBuildArgs '-t demo_api'
         reuseNode true
     }}
 
