@@ -3,7 +3,7 @@
 
 pipeline {
     agent { dockerfile {
-        //filename 'demo_api'
+        label  'demo_api'
         reuseNode true
     }}
 
